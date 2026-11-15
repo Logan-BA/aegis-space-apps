@@ -11,6 +11,8 @@
 > cosmic noise, generate clear reports and **PDFs**, and show a live **web control panel**.
 > Educational simulation — not a medical device.
 
+**Demo (7 diapositivas):** [docs/AEGIS_demo.pdf](docs/AEGIS_demo.pdf) · **App para Windows:** [Release v1.0](https://github.com/Logan-BA/aegis-space-apps/releases/tag/v1.0) · **Uso de IA:** [USO_DE_IA.md](USO_DE_IA.md)
+
 ![Simulación de la misión a Marte](docs/capturas/simulacion_marte.png)
 
 ## Qué hace
@@ -63,6 +65,8 @@ powershell -ExecutionPolicy Bypass -File preparar_proyecto.ps1
 | [simulacion_unity/CONEXION_AEGIS.md](simulacion_unity/CONEXION_AEGIS.md) | Conexión con el motor del equipo (bus `aegis.v1`). |
 | [ESTADO-EQUIPO.md](ESTADO-EQUIPO.md) | Estado del proyecto AEGIS completo (motor, dashboard web y Unity). |
 | [LICENCIAS_TERCEROS.md](LICENCIAS_TERCEROS.md) | Licencias de modelos, voces, librerías y avatar. |
+| [USO_DE_IA.md](USO_DE_IA.md) | Dónde y cómo se usó Inteligencia Artificial (requisito de Space Apps). |
+| [docs/ENVIO_SPACE_APPS.md](docs/ENVIO_SPACE_APPS.md) | Textos del formulario de envío a Space Apps. |
 
 ## Estructura
 
