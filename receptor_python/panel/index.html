@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AEGIS · Centro de control</title>
+<link rel="stylesheet" href="/panel.css">
+</head>
+<body>
+<header class="barra">
+  <div class="marca">
+    <div class="logo" aria-hidden="true"><span></span></div>
+    <div>
+      <h1>AEGIS <span class="tenue">· Centro de control en Tierra</span></h1>
+      <p id="estacion" class="tenue">Estación terrena</p>
+    </div>
+  </div>
+  <div class="mision">
+    <p id="mision" class="tenue">Misión —</p>
+    <p id="fase"><b>Esperando a la nave</b></p>
+  </div>
+  <div class="acciones">
+    <span id="enlace-pill" class="pill gris">○ SIN SEÑAL</span>
+    <span id="reloj" class="tenue mono">—</span>
+    <button id="btn-pdf" class="boton primario" type="button">Generar informe PDF</button>
+  </div>
+</header>
+
+<main>
+  <section id="espera" class="tarjeta espera" hidden>
+    <h2>Esperando la primera transmisión de la nave…</h2>
+    <p>La simulación debe enviar a esta estación: en <code>StreamingAssets/enlace/enlace.json</code> agregue
+      <code id="url-ws">ws://IP_DE_ESTA_PC:8765</code> a <code>"estaciones"</code>, o lance
+      <code>SaludAstronauta.exe -estacion ws://IP_DE_ESTA_PC:8765</code>.</p>
+  </section>
+
+  <section class="kpis" aria-label="Indicadores principales">
+    <article class="kpi" id="k-estado"><h3>Estado general</h3><p class="valor">—</p><p class="nota">—</p></article>
+    <article class="kpi"><h3>Día de misión</h3><p class="valor" id="k-dia">—</p><div class="barra-prog"><span id="k-dia-bar"></span></div><p class="nota" id="k-dia-nota">—</p></article>
+    <article class="kpi"><h3>Distancia a la Tierra</h3><p class="valor" id="k-dist">—</p><p class="nota" id="k-luz">—</p></article>
+    <article class="kpi"><h3>Calidad del enlace</h3><p class="valor" id="k-calidad">—</p><p class="nota" id="k-bits">—</p></article>
+    <article class="kpi"><h3>Tormentas solares</h3><p class="valor" id="k-tormentas">—</p><p class="nota" id="k-tormenta-nota">—</p></article>
+    <article class="kpi"><h3>Picos filtrados</h3><p class="valor" id="k-picos">—</p><p class="nota">lecturas falsas por radiación</p></article>
+  </section>
+
+  <div class="rejilla">
+    <div class="col-principal">
+      <section class="tarjeta">
+        <div class="titulo-sec"><h2>Tripulación</h2><span class="tenue">signos vitales ya filtrados</span></div>
+        <div id="tripulacion" class="tripulacion"></div>
+      </section>
+
+      <section class="tarjeta">
+        <div class="titulo-sec"><h2>Tendencias de la misión</h2><div id="leyenda" class="leyenda"></div></div>
+        <div class="graficos">
+          <figure><figcaption>Dosis de radiación acumulada (mSv)</figcaption><canvas id="g-dosis"></canvas></figure>
+          <figure><figcaption>Índice SANS · visión (0 normal – 1 máximo)</figcaption><canvas id="g-sans"></canvas></figure>
+          <figure><figcaption>Densidad ósea (% del inicio)</figcaption><canvas id="g-hueso"></canvas></figure>
+          <figure><figcaption>Masa muscular (% del inicio)</figcaption><canvas id="g-musculo"></canvas></figure>
+        </div>
+      </section>
+    </div>
+
+    <div class="col-lateral">
+      <section class="tarjeta">
+        <div class="titulo-sec"><h2>Situación</h2><span id="actualizado" class="tenue">—</span></div>
+        <p id="conclusion" class="conclusion">—</p>
+        <ul id="inferencias" class="inferencias"></ul>
+      </section>
+
+      <section class="tarjeta">
+        <div class="titulo-sec"><h2>Alertas activas</h2><span id="n-alertas" class="tenue">—</span></div>
+        <ul id="alertas" class="alertas"></ul>
+      </section>
+
+      <section class="tarjeta">
+        <div class="titulo-sec"><h2>Informes</h2><a id="csv" class="enlace" href="/informes/telemetria.csv">Descargar CSV</a></div>
+        <ul id="informes" class="informes"></ul>
+      </section>
+
+      <section class="tarjeta">
+        <div class="titulo-sec"><h2>Enlace espacio–Tierra</h2><span class="tenue">AES-256 + HMAC</span></div>
+        <dl id="enlace" class="datos"></dl>
+        <ul id="ruido" class="chips"></ul>
+      </section>
+
+      <section class="tarjeta">
+        <div class="titulo-sec"><h2>Filtro de picos</h2><span class="tenue">posibles impactos de radiación</span></div>
+        <ul id="picos" class="picos"></ul>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer class="pie tenue">AEGIS · Simulación educativa para NASA Space Apps · No es un diagnóstico médico · Datos recibidos por el enlace cifrado</footer>
+<div id="aviso" class="aviso" role="status" aria-live="polite" hidden></div>
+<script src="/panel.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+# ---------------------------------------------------------------- secretos (NUNCA publicar)
+*.key
+*.pem
+.env
+
+# ---------------------------------------------------------------- Unity
+simulacion_unity/[Ll]ibrary/
+simulacion_unity/[Tt]emp/
+simulacion_unity/[Oo]bj/
+simulacion_unity/[Bb]uild/
+simulacion_unity/[Bb]uilds/
+simulacion_unity/[Ll]ogs/
+simulacion_unity/[Uu]ser[Ss]ettings/
+simulacion_unity/[Rr]esultados/
+simulacion_unity/*.csproj
+simulacion_unity/*.sln
+simulacion_unity/*.slnx
+simulacion_unity/.vs/
+simulacion_unity/.vscode/
+simulacion_unity/.idea/
+
+# Modelos de IA de más de 100 MB: los descarga preparar_proyecto.ps1 / .sh
+simulacion_unity/Assets/StreamingAssets/piper/*.onnx
+simulacion_unity/Assets/StreamingAssets/piper/*.onnx.meta
+simulacion_unity/Assets/StreamingAssets/whisper/ggml-*.bin
+simulacion_unity/Assets/StreamingAssets/whisper/ggml-*.bin.meta
+
+# App compilada: se publica como Release (ZIP), no dentro del repositorio
+App/
+
+# ---------------------------------------------------------------- estaciones terrenas
+receptor_python/.venv/
+receptor_python/informes*/
+**/__pycache__/
+receptor_rust/target/
+receptor_rust/informes*/
+
+# ---------------------------------------------------------------- datos locales de ASTRA (conversaciones)
+IA/memoria_astra.jsonl
+IA/Modelfile
+
+# ---------------------------------------------------------------- otros
+*.rar
+NASA_Wormball_logo.svg.webp
+images.jpg
+La-Nasa-vuelve-a-retrasar-el-lanzamiento-de-Artemisa-I-040222.jpg
+blender/salida/*.blend1
+*.blend1
+Thumbs.db
+desktop.ini
+.DS_Store
+*.key.meta

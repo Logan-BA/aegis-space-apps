@@ -1,0 +1,43 @@
+# colores de nave_spaceapps.py
+newmtl blanco
+Kd 0.900 0.900 0.880
+Ka 0 0 0
+Ks 0.15 0.15 0.15
+Ns 40
+d 1
+
+newmtl gris
+Kd 0.550 0.560 0.600
+Ka 0 0 0
+Ks 0.6 0.6 0.6
+Ns 200
+d 1
+
+newmtl oro
+Kd 0.850 0.650 0.250
+Ka 0 0 0
+Ks 0.6 0.6 0.6
+Ns 200
+d 1
+
+newmtl oscuro
+Kd 0.150 0.150 0.170
+Ka 0 0 0
+Ks 0.6 0.6 0.6
+Ns 200
+d 1
+
+newmtl solar
+Kd 0.100 0.140 0.380
+Ka 0 0 0
+Ks 0.15 0.15 0.15
+Ns 40
+d 1
+
+newmtl vidrio
+Kd 0.050 0.120 0.200
+Ka 0 0 0
+Ks 0.15 0.15 0.15
+Ns 40
+d 1
+

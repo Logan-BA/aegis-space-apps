@@ -1,0 +1,40 @@
+{
+  "_ayuda": "Configuración del enlace Unity (PC 3) con el bus AEGIS (PC 1). Cada ruta es una lista de candidatos: se usa el primero que exista en el mensaje; 'a.b.0.c' entra en objetos y arreglos. Si un campo no aparece por ruta, se busca esa clave en todo el mensaje. Ajustar estas listas al contrato real de aegis.v1 sin tocar código.",
+  "url": "ws://127.0.0.1:8001/ws",
+  "subprotocolo": "aegis.v1",
+  "mensaje_inicial": "",
+  "rutas": {
+    "tipo": ["type", "tipo", "event", "kind"],
+    "dia": ["day", "dia", "mission_day", "current_day", "state.day", "mission.day"],
+    "dias_totales": ["total_days", "duration_days", "mission_days", "days_total", "mission.total_days"],
+    "escenario": ["scenario", "escenario", "scenario_id", "scenario_name", "mission.scenario"],
+    "fase": ["phase", "fase", "segment", "location", "leg"],
+    "tripulacion": ["crew", "astronauts", "tripulacion", "state.crew", "data.crew"],
+    "id": ["id", "astronaut_id", "crew_id"],
+    "nombre": ["name", "nombre", "callsign", "display_name"],
+    "dosis_msv": ["dose_msv", "dose_mSv", "cumulative_dose_msv", "radiation_dose_msv", "radiation.dose_msv", "dose", "dosis"],
+    "sueno_h": ["sleep_hours", "sleep_h", "sleep.hours", "sleep", "sueno"],
+    "densidad_osea": ["bone_density", "bone_density_pct", "bmd", "bone", "densidad_osea"],
+    "capacidad_aerobica": ["vo2max", "vo2_max", "aerobic_capacity", "aerobic", "vo2", "capacidad_aerobica"],
+    "alertas": ["alerts", "alertas", "signals", "observations"],
+    "alerta_texto": ["message", "text", "title", "label", "summary", "mensaje"],
+    "alerta_nivel": ["severity", "level", "nivel", "status"],
+    "alerta_fuente": ["source", "fuente", "reference", "citation", "url"],
+    "alerta_astronauta": ["astronaut_id", "crew_id", "astronaut"],
+    "evento_solar": ["solar_event", "donki_event", "solar", "flare", "cme", "sep", "evento_solar"]
+  },
+  "escenas_por_escenario": {
+    "marte": "mars", "mars": "mars",
+    "tormenta": "deep_space_mars", "storm": "deep_space_mars",
+    "tranquilo": "leo", "calm": "leo", "quiet": "leo",
+    "limite": "deep_space_mars", "límite": "deep_space_mars", "limit": "deep_space_mars"
+  },
+  "escenas_por_fase": {
+    "superficie": "mars_surface", "surface": "mars_surface",
+    "transito": "deep_space_mars", "tránsito": "deep_space_mars", "transit": "deep_space_mars", "cruise": "deep_space_mars",
+    "orbita": "leo", "órbita": "leo", "orbit": "leo", "leo": "leo",
+    "luna": "moon_surface", "moon": "moon_surface",
+    "tierra": "earth", "earth": "earth", "launch": "earth", "lanzamiento": "earth"
+  },
+  "niveles_rojos": ["high", "alta", "alto", "critical", "crítica", "critica", "red", "roja", "danger", "severe"]
+}

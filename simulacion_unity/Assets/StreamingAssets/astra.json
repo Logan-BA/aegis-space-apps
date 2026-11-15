@@ -1,0 +1,17 @@
+{
+  "_ayuda": "Configuración de ASTRA (asistente médica). Usa Ollama local; prueba los modelos en este orden. 'astra' se crea con IA/entrenar_astra.ps1. voz_motor: piper (voz neuronal) o windows. voz_velocidad: menor = más rápida (0.8 a 1.1). rostro: realista o lineas. mic_manos_libres: empezar escuchando. mic_interrumpir: si hablas mientras ASTRA habla, se calla. mic_palabra_clave: en manos libres solo responde si dices 'ASTRA' (útil con público). mic_sensibilidad: mayor = más sensible (0.5 a 2).",
+  "ollama_url": "http://127.0.0.1:11434",
+  "modelos": ["astra", "qwen2.5:3b", "llama3.2:3b", "qwen2.5:7b"],
+  "temperatura": 0.3,
+  "max_tokens": 220,
+  "voz": true,
+  "voz_motor": "piper",
+  "voz_velocidad": 0.9,
+  "voz_volumen": 1.0,
+  "rostro": "realista",
+  "mic_manos_libres": false,
+  "mic_interrumpir": true,
+  "mic_palabra_clave": false,
+  "mic_sensibilidad": 1.0,
+  "avisos_automaticos": true
+}

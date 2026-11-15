@@ -1,0 +1,4 @@
+.venv/
+__pycache__/
+informes*/
+clave_nasa.key

@@ -1,0 +1,12 @@
+{
+  "_ayuda": "Telemetría cifrada nave → Tierra por WebSocket. estaciones: URLs de las estaciones terrenas (receptor_python o receptor_rust) — cambie 127.0.0.1 por la IP de la otra computadora. clave: archivo con la clave de 256 bits (la misma en las estaciones). ruido_cosmico: simula el ruido del canal espacial. picos_seu: simula impactos de radiación en los sensores. retraso_luz_escala: 0 = sin esperar; 0.01 = 1 % del retraso real de la luz.",
+  "activo": true,
+  "nave": "AEGIS-1",
+  "estaciones": ["ws://127.0.0.1:8765", "ws://127.0.0.1:8766"],
+  "intervalo_s": 1.0,
+  "clave": "clave_nasa.key",
+  "comprimir": true,
+  "ruido_cosmico": true,
+  "picos_seu": true,
+  "retraso_luz_escala": 0.0
+}

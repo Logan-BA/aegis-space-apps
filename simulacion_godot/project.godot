@@ -1,0 +1,24 @@
+; Engine configuration file.
+; Proyecto Godot 4.3+ - Simulacion de salud de astronautas (NASA Space Apps)
+
+config_version=5
+
+[application]
+
+config/name="Salud Astronauta - Space Apps"
+config/description="Simulacion del efecto de la gravedad, la radiacion y el aislamiento en la salud de la tripulacion."
+run/main_scene="res://scenes/main.tscn"
+config/features=PackedStringArray("4.3", "Forward Plus")
+config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1600
+window/size/viewport_height=900
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[rendering]
+
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)
+anti_aliasing/quality/msaa_3d=2
