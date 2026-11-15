@@ -11,7 +11,7 @@
 > cosmic noise, generate clear reports and **PDFs**, and show a live **web control panel**.
 > Educational simulation — not a medical device.
 
-**Demo (7 diapositivas):** [docs/AEGIS_demo.pdf](docs/AEGIS_demo.pdf) · **App para Windows:** [Release v1.0](https://github.com/Logan-BA/aegis-space-apps/releases/tag/v1.0) · **Uso de IA:** [USO_DE_IA.md](USO_DE_IA.md)
+**Presentation (EN):** [PDF](docs/AEGIS_presentation_EN.pdf) · [PowerPoint](docs/AEGIS_presentation_EN.pptx) · **Video demo (2:35):** [AEGIS-demo-video.mp4](https://github.com/Logan-BA/aegis-space-apps/releases/download/v1.0/AEGIS-demo-video.mp4) · **Demo técnica (7 diapositivas):** [docs/AEGIS_demo.pdf](docs/AEGIS_demo.pdf) · **App para Windows:** [Release v1.0](https://github.com/Logan-BA/aegis-space-apps/releases/tag/v1.0) · **Uso de IA:** [USO_DE_IA.md](USO_DE_IA.md)
 
 ![Simulación de la misión a Marte](docs/capturas/simulacion_marte.png)
 
